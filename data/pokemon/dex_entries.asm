@@ -1073,7 +1073,7 @@ StarmieDexEntry:
 	text_end
 
 BulbasaurDexEntry:
-	db "SEED@"
+	db "FE@"
 	db 2,4
 	dw 150
 	text_far _BulbasaurDexEntry

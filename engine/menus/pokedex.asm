@@ -421,43 +421,158 @@ ShowPokedexDataInternal:
 	xor a
 	ldh [hTileAnimations], a
 
-	hlcoord 0, 0
-	ld de, 1
-	lb bc, $64, SCREEN_WIDTH
-	call DrawTileLine ; draw top border
-
-	hlcoord 0, 17
-	ld b, $6f
-	call DrawTileLine ; draw bottom border
-
-	hlcoord 0, 1
-	ld de, 20
-	lb bc, $66, $10
-	call DrawTileLine ; draw left border
-
-	hlcoord 19, 1
-	ld b, $67
-	call DrawTileLine ; draw right border
-
-	ld a, $63 ; upper left corner tile
-	ldcoord_a 0, 0
-	ld a, $65 ; upper right corner tile
-	ldcoord_a 19, 0
-	ld a, $6c ; lower left corner tile
+; Dex Entry Border
+	ld a, $60 ; upper left corner tile
+	ldcoord_a 0, 9
+	ld a, $62 ; upper right corner tile
+	ldcoord_a 19, 9
+	ld a, $66 ; lower left corner tile
 	ldcoord_a 0, 17
-	ld a, $6e ; lower right corner tile
+	ld a, $68 ; lower left corner tile
 	ldcoord_a 19, 17
 
-	hlcoord 0, 9
-	ld de, PokedexDataDividerLine
-	call PlaceString ; draw horizontal divider line
+	hlcoord 11, 6
+	ld de, 1
+	lb bc, $67, 7
+	call DrawTileLine
+	ld a, $66 ; lower left corner tile
+	ldcoord_a 10, 6
+	ld a, $68 ; lower left corner tile
+	ldcoord_a 18, 6
 
-	hlcoord 9, 6
-	ld de, HeightWeightText
-	call PlaceString
+	ld a, $64 ; lower left corner tile
+	ldcoord_a 9, 6
+	ld a, $64 ; lower left corner tile
+	ldcoord_a 19, 6
+
+	hlcoord 9, 7
+	ld de, 1
+	lb bc, $64, 11
+	call DrawTileLine
+	hlcoord 9, 8
+	ld de, 1
+	lb bc, $64, 11
+	call DrawTileLine
+
+	hlcoord 1, 9
+	ld de, 1
+	lb bc, $61, 18
+	call DrawTileLine
+	hlcoord 0, 10
+	ld de, 20
+	lb bc, $63, 7
+	call DrawTileLine
+	hlcoord 19, 10
+	ld de, 20
+	lb bc, $65, 7
+	call DrawTileLine
+	hlcoord 1, 17
+	ld de, 1
+	lb bc, $67, 18
+	call DrawTileLine
+
+; Monster Box Border
+	ld a, $60 ; upper left corner tile
+	ldcoord_a 0, 0
+	ld a, $62 ; upper right corner tile
+	ldcoord_a 8, 0
+	ld a, $6c ; lower left corner tile
+	ldcoord_a 8, 1
+	ld a, $6d ; lower left corner tile
+	ldcoord_a 9, 1
+	ld a, $66 ; lower right corner tile
+	ldcoord_a 0, 8
+	ld a, $68 ; lower right corner tile
+	ldcoord_a 8, 8
+
+	hlcoord 1, 0
+	ld de, 1
+	lb bc, $61, 7
+	call DrawTileLine
+	hlcoord 0, 1
+	ld de, 20
+	lb bc, $63, 7
+	call DrawTileLine
+	hlcoord 8, 5
+	ld de, 20
+	lb bc, $65, 3
+	call DrawTileLine
+	hlcoord 1, 8
+	ld de, 1
+	lb bc, $67, 7
+	call DrawTileLine
+
+	ld a, $60 ; upper right corner tile
+	ldcoord_a 9, 0
+	ld a, $62 ; upper right corner tile
+	ldcoord_a 13, 0
+	ld a, $6e ; upper right corner tile
+	ldcoord_a 13, 1
+
+	ld a, $62 ; upper right corner tile
+	ldcoord_a 18, 1
+	ld a, $65 ; upper right corner tile
+	ldcoord_a 18, 2
+	ld a, $68 ; upper right corner tile
+	ldcoord_a 18, 3
+
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 19, 1
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 19, 2
+
+	hlcoord 10, 0
+	ld de, 1
+	lb bc, $61, 3
+	call DrawTileLine
+	hlcoord 14, 0
+	ld de, 1
+	lb bc, $64, 6
+	call DrawTileLine
+	hlcoord 14, 1
+	ld de, 1
+	lb bc, $61, 4
+	call DrawTileLine
+
+	ld a, $6f ; upper right corner tile
+	ldcoord_a 8, 5
+	ld a, $70 ; upper right corner tile
+	ldcoord_a 9, 5
+	ld a, $71 ; upper right corner tile
+	ldcoord_a 10, 5
+	ld a, $65 ; upper right corner tile
+	ldcoord_a 8, 4
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 19, 3
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 9, 4
+	ld a, $60 ; upper right corner tile
+	ldcoord_a 10, 4
+
+	hlcoord 9, 3
+	ld de, 1
+	lb bc, $67, 9
+	call DrawTileLine
+
+	hlcoord 11, 4
+	ld de, 1
+	lb bc, $61, 7
+	call DrawTileLine
+
+	ld a, $62 ; upper right corner tile
+	ldcoord_a 18, 4
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 19, 4
+	ld a, $65 ; upper right corner tile
+	ldcoord_a 18, 5
+	ld a, $64 ; upper right corner tile
+	ldcoord_a 19, 5
+	ld a, $69 ; upper right corner tile
+	ldcoord_a 8, 3
+
 
 	call GetMonName
-	hlcoord 9, 2
+	hlcoord 8, 2
 	call PlaceString
 
 	ld hl, PokedexEntryPointers
@@ -471,7 +586,7 @@ ShowPokedexDataInternal:
 	ld e, a
 	ld d, [hl] ; de = address of pokedex entry
 
-	hlcoord 9, 4
+	hlcoord 12, 5
 	call PlaceString ; print species name
 
 	ld h, b
@@ -481,13 +596,9 @@ ShowPokedexDataInternal:
 	push af
 	call IndexToPokedex
 
-	hlcoord 2, 8
-	ld a, "№"
-	ld [hli], a
-	ld a, "<DOT>"
-	ld [hli], a
+	hlcoord 10, 1
 	ld de, wd11e
-	lb bc, LEADING_ZEROES | 1, 3
+	lb bc, 1, 3
 	call PrintNumber ; print pokedex number
 
 	ld hl, wPokedexOwned
@@ -519,58 +630,13 @@ ShowPokedexDataInternal:
 	ld a, c
 	and a
 	jp z, .waitForButtonPress ; if the pokemon has not been owned, don't print the height, weight, or description
-	inc de ; de = address of feet (height)
-	ld a, [de] ; reads feet, but a is overwritten without being used
-	hlcoord 12, 6
-	lb bc, 1, 2
-	call PrintNumber ; print feet (height)
-	ld a, "′"
-	ld [hl], a
-	inc de
-	inc de ; de = address of inches (height)
-	hlcoord 15, 6
-	lb bc, LEADING_ZEROES | 1, 2
-	call PrintNumber ; print inches (height)
-	ld a, "″"
-	ld [hl], a
-; now print the weight (note that weight is stored in tenths of pounds internally)
-	inc de
-	inc de
-	inc de ; de = address of upper byte of weight
-	push de
-; put weight in big-endian order at hDexWeight
-	ld hl, hDexWeight
-	ld a, [hl] ; save existing value of [hDexWeight]
-	push af
-	ld a, [de] ; a = upper byte of weight
-	ld [hli], a ; store upper byte of weight in [hDexWeight]
-	ld a, [hl] ; save existing value of [hDexWeight + 1]
-	push af
-	dec de
-	ld a, [de] ; a = lower byte of weight
-	ld [hl], a ; store lower byte of weight in [hDexWeight + 1]
-	ld de, hDexWeight
-	hlcoord 11, 8
-	lb bc, 2, 5 ; 2 bytes, 5 digits
-	call PrintNumber ; print weight
-	hlcoord 14, 8
-	ldh a, [hDexWeight + 1]
-	sub 10
-	ldh a, [hDexWeight]
-	sbc 0
-	jr nc, .next
-	ld [hl], "0" ; if the weight is less than 10, put a 0 before the decimal point
-.next
+	ld h, d
+	ld l, e
 	inc hl
-	ld a, [hli]
-	ld [hld], a ; make space for the decimal point by moving the last digit forward one tile
-	ld [hl], "<DOT>" ; decimal point tile
-	pop af
-	ldh [hDexWeight + 1], a ; restore original value of [hDexWeight + 1]
-	pop af
-	ldh [hDexWeight], a ; restore original value of [hDexWeight]
-	pop hl
-	inc hl ; hl = address of pokedex description text
+	inc hl
+	inc hl
+	inc hl
+	inc hl
 	bccoord 1, 11
 	ld a, %10
 	ldh [hClearLetterPrintingDelayFlags], a

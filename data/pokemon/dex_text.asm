@@ -1249,13 +1249,12 @@ _StarmieDexEntry::
 	dex
 
 _BulbasaurDexEntry::
-	text "A strange seed was"
-	next "planted on its"
-	next "back at birth."
+	text "It was born from a"
+	next "single piece of "
+	next "metal. Brute force"
 
-	page "The plant sprouts"
-	next "and grows with"
-	next "this #MON"
+	page "charges are its"
+	next "forte"
 	dex
 
 _VenusaurDexEntry::
