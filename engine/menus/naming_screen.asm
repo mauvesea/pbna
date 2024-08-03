@@ -172,7 +172,7 @@ DisplayNamingScreen:
 	ld a, [wIsInBattle]
 	and a
 	jp z, LoadTextBoxTilePatterns
-	jpfar LoadHudTilePatterns
+	ret
 
 .namingScreenButtonFunctions
 	dw .dPadReturnPoint

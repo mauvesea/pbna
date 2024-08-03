@@ -54,6 +54,7 @@
 	charmap "ぇ",         $77 ; hiragana small e, unused
 	charmap "ぉ",         $78 ; hiragana small o, unused
 
+	charmap "A-Button",  $76
 	charmap "┌",         $77
 	charmap "─1",        $78
 	charmap "┐",         $79
@@ -158,6 +159,7 @@
 	charmap "'s",        $bd
 	charmap "'t",        $be
 	charmap "'v",        $bf
+	charmap "blacksq",   $c0
 
 	charmap "'",         $e0
 	charmap "<PK>",      $e1
@@ -177,7 +179,7 @@
 
 	charmap "▷",         $ec
 	charmap "▶",         $ed
-	charmap "▼",         $ee
+	charmap "▼",         $76
 	charmap "♂",         $ef
 	charmap "¥",         $f0
 	charmap "×",         $f1

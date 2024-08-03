@@ -31,6 +31,24 @@ LoadTextBoxTilePatterns::
 	jp CopyVideoData ; if LCD is on, transfer during V-blank
 
 LoadHpBarAndStatusTilePatterns::
+	farcall CheckSGB
+	jr nc, .NotSGBBorder
+	ldh a, [rLCDC]
+	bit 7, a ; is the LCD enabled?
+	jr nz, .onSGB
+.offSGB
+	ld hl, SGBHpBarAndStatusGraphics
+	ld de, vChars2 tile $62
+	ld bc, SGBHpBarAndStatusGraphicsEnd - SGBHpBarAndStatusGraphics
+	ld a, BANK(SGBHpBarAndStatusGraphics)
+	jp FarCopyData2 ; if LCD is off, transfer all at once
+.onSGB
+	ld de, SGBHpBarAndStatusGraphics
+	ld hl, vChars2 tile $62
+	lb bc, BANK(SGBHpBarAndStatusGraphics), (SGBHpBarAndStatusGraphicsEnd - SGBHpBarAndStatusGraphics) / $10
+	jp CopyVideoData ; if LCD is on, transfer during V-blank
+
+.NotSGBBorder
 	ldh a, [rLCDC]
 	bit 7, a ; is the LCD enabled?
 	jr nz, .on

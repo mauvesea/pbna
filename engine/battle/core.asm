@@ -13,9 +13,9 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	call DisplayTextBoxID
 	hlcoord 1, 5
 	lb bc, 3, 7
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	call DisableLCD
-	call LoadFontTilePatterns
+	call LoadFontTilePatternsBattle
 	call LoadHudAndHpBarAndStatusTilePatterns
 	ld hl, vBGMap0
 	ld bc, BG_MAP_WIDTH * BG_MAP_HEIGHT
@@ -772,7 +772,7 @@ FaintEnemyPokemon:
 	call SlideDownFaintedMonPic
 	hlcoord 0, 0
 	lb bc, 4, 11
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	ld a, [wIsInBattle]
 	dec a
 	jr z, .wild_win
@@ -1023,7 +1023,7 @@ RemoveFaintedPlayerMon:
 	call ReadPlayerMonCurHPAndStatus
 	hlcoord 9, 7
 	lb bc, 5, 11
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	hlcoord 1, 10
 	decoord 1, 11
 	call SlideDownFaintedMonPic
@@ -1117,7 +1117,6 @@ ChooseNextMon:
 	predef FlagActionPredef
 	call LoadBattleMonFromParty
 	call GBPalWhiteOut
-	call LoadHudTilePatterns
 	call LoadScreenTilesFromBuffer1
 	call RunDefaultPaletteCommand
 	call GBPalNormal
@@ -1138,7 +1137,7 @@ HandlePlayerBlackOut:
 	jr nz, .notRival1Battle
 	hlcoord 0, 0  ; rival 1 battle
 	lb bc, 8, 21
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	call ScrollTrainerPicAfterBattle
 	ld c, 40
 	call DelayFrames
@@ -1407,13 +1406,12 @@ EnemySendOutFirstMon:
 	ld [wCurrentMenuItem], a
 .next7
 	call GBPalWhiteOut
-	call LoadHudTilePatterns
 	call LoadScreenTilesFromBuffer1
 .next4
 	call ClearSprites
 	hlcoord 0, 0
 	lb bc, 4, 11
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	ld b, SET_PAL_BATTLE
 	call RunPaletteCommand
 	call GBPalNormal
@@ -1768,7 +1766,7 @@ SendOutMon:
 AnimateRetreatingPlayerMon:
 	hlcoord 1, 5
 	lb bc, 7, 7
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	hlcoord 3, 7
 	lb bc, 5, 5
 	xor a
@@ -1792,7 +1790,7 @@ AnimateRetreatingPlayerMon:
 .clearScreenArea
 	hlcoord 1, 5
 	lb bc, 7, 7
-	jp ClearScreenArea
+	jp ClearScreenAreaBattle
 
 ; reads player's current mon's HP into wBattleMonHP
 ReadPlayerMonCurHPAndStatus:
@@ -1813,15 +1811,34 @@ DrawHUDsAndHPBars:
 DrawPlayerHUDAndHPBar:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
+
+	hlcoord 8, 7
+	lb bc, 5, 12
+	call ClearScreenAreaBattle
+
+;HUD
+	ld a, $77
+	ldcoord_a 08, 07
+	ld a, $79
+	ldcoord_a 19, 07
+
 	hlcoord 9, 7
-	lb bc, 5, 11
-	call ClearScreenArea
-	callfar PlacePlayerHUDTiles
-	hlcoord 18, 9
-	ld [hl], $73
+	ld de, 1
+	lb bc, $78, 10
+	call DrawTileLineBattle
+
+	hlcoord 8, 8
+	ld de, 20
+	lb bc, $7a, 4
+	call DrawTileLineBattle
+
+	hlcoord 19, 8
+	ld de, 20
+	lb bc, $7b, 4
+	call DrawTileLineBattle
+
 	ld de, wBattleMonNick
-	hlcoord 10, 7
-	call CenterMonName
+	hlcoord 9, 8
 	call PlaceString
 	ld hl, wBattleMonSpecies
 	ld de, wLoadedMon
@@ -1831,18 +1848,19 @@ DrawPlayerHUDAndHPBar:
 	ld de, wLoadedMonLevel
 	ld bc, wBattleMonPP - wBattleMonLevel
 	call CopyData
-	hlcoord 14, 8
+	hlcoord 14, 9
 	push hl
 	inc hl
 	ld de, wLoadedMonStatus
 	call PrintStatusConditionNotFainted
 	pop hl
-	jr nz, .doNotPrintLevel
+
+	hlcoord 9, 9
 	call PrintLevel
-.doNotPrintLevel
+
 	ld a, [wLoadedMonSpecies]
 	ld [wcf91], a
-	hlcoord 10, 9
+	hlcoord 9, 10
 	predef DrawHP
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
@@ -1874,25 +1892,29 @@ DrawPlayerHUDAndHPBar:
 DrawEnemyHUDAndHPBar:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
+
 	hlcoord 0, 0
 	lb bc, 4, 12
-	call ClearScreenArea
-	callfar PlaceEnemyHUDTiles
+	call ClearScreenAreaBattle
+
+	hlcoord 0, 0
+	ld b, 3
+	ld c, 10
+	call TextBoxBorder
+
 	ld de, wEnemyMonNick
-	hlcoord 1, 0
-	call CenterMonName
+	hlcoord 1, 1
 	call PlaceString
-	hlcoord 4, 1
+	hlcoord 6, 2
 	push hl
 	inc hl
 	ld de, wEnemyMonStatus
 	call PrintStatusConditionNotFainted
 	pop hl
-	jr nz, .skipPrintLevel ; if the mon has a status condition, skip printing the level
+	hlcoord 1, 2
 	ld a, [wEnemyMonLevel]
 	ld [wLoadedMonLevel], a
 	call PrintLevel
-.skipPrintLevel
 	ld hl, wEnemyMonHP
 	ld a, [hli]
 	ldh [hMultiplicand + 1], a
@@ -1955,7 +1977,7 @@ DrawEnemyHUDAndHPBar:
 .drawHPBar
 	xor a
 	ld [wHPBarType], a
-	hlcoord 2, 2
+	hlcoord 1, 3
 	call DrawHPBar
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
@@ -2243,7 +2265,6 @@ UseBagItem:
 	xor a
 	ld [wPseudoItemID], a
 	call UseItem
-	call LoadHudTilePatterns
 	call ClearSprites
 	xor a
 	ld [wCurrentMenuItem], a
@@ -2318,7 +2339,6 @@ PartyMenuOrRockOrRun:
 .quitPartyMenu
 	call ClearSprites
 	call GBPalWhiteOut
-	call LoadHudTilePatterns
 	call LoadScreenTilesFromBuffer2
 	call RunDefaultPaletteCommand
 	call GBPalNormal
@@ -2407,7 +2427,6 @@ PartyMenuOrRockOrRun:
 	ld [wActionResultOrTookBattleTurn], a
 	call GBPalWhiteOut
 	call ClearSprites
-	call LoadHudTilePatterns
 	call LoadScreenTilesFromBuffer1
 	call RunDefaultPaletteCommand
 	call GBPalNormal
@@ -6628,32 +6647,7 @@ ApplyBadgeStatBoosts:
 	ret
 
 LoadHudAndHpBarAndStatusTilePatterns:
-	call LoadHpBarAndStatusTilePatterns
-
-LoadHudTilePatterns:
-	ldh a, [rLCDC]
-	add a ; is LCD disabled?
-	jr c, .lcdEnabled
-.lcdDisabled
-	ld hl, BattleHudTiles1
-	ld de, vChars2 tile $6d
-	ld bc, BattleHudTiles1End - BattleHudTiles1
-	ld a, BANK(BattleHudTiles1)
-	call FarCopyDataDouble
-	ld hl, BattleHudTiles2
-	ld de, vChars2 tile $73
-	ld bc, BattleHudTiles3End - BattleHudTiles2
-	ld a, BANK(BattleHudTiles2)
-	jp FarCopyDataDouble
-.lcdEnabled
-	ld de, BattleHudTiles1
-	ld hl, vChars2 tile $6d
-	lb bc, BANK(BattleHudTiles1), (BattleHudTiles1End - BattleHudTiles1) / $8
-	call CopyVideoDataDouble
-	ld de, BattleHudTiles2
-	ld hl, vChars2 tile $73
-	lb bc, BANK(BattleHudTiles2), (BattleHudTiles3End - BattleHudTiles2) / $8
-	jp CopyVideoDataDouble
+	jp LoadHpBarAndStatusTilePatterns
 
 PrintEmptyString:
 	ld hl, .emptyString
@@ -6885,10 +6879,10 @@ _InitBattleCommon:
 	call LoadScreenTilesFromBuffer1
 	hlcoord 9, 7
 	lb bc, 5, 10
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	hlcoord 1, 0
 	lb bc, 4, 10
-	call ClearScreenArea
+	call ClearScreenAreaBattle
 	call ClearSprites
 	ld a, [wIsInBattle]
 	dec a ; is it a wild battle?
@@ -7029,10 +7023,10 @@ LoadMonBackPic:
 ; been loaded with GetMonHeader.
 	ld a, [wBattleMonSpecies2]
 	ld [wcf91], a
-	hlcoord 1, 5
-	ld b, 7
-	ld c, 8
-	call ClearScreenArea
+	hlcoord 2, 6
+	ld b, 6
+	ld c, 6
+	call ClearScreenAreaBattle
 	ld hl,  wMonHBackSprite - wMonHeader
 	call UncompressMonSprite
 	call LoadBackSpriteUnzoomed
@@ -7044,7 +7038,36 @@ LoadMonBackPic:
 	jp CopyVideoData
 
 LoadBackSpriteUnzoomed:
-	ld a, $66
+	ld a, $77
 	ld de, vBackPic
 	push de
 	jp LoadUncompressedBackSprite
+
+LoadFontTilePatternsBattle::
+	ldh a, [rLCDC]
+	bit 7, a ; is the LCD enabled?
+	jr nz, .on
+.off
+	ld hl, FontBattleGraphics
+	ld de, vFont
+	ld bc, FontBattleGraphicsEnd - FontBattleGraphics
+	ld a, BANK(FontBattleGraphics)
+	jp FarCopyDataDouble ; if LCD is off, transfer all at once
+.on
+	ld de, FontBattleGraphics
+	ld hl, vFont
+	lb bc, BANK(FontBattleGraphics), (FontBattleGraphicsEnd - FontBattleGraphics) / $8
+	jp CopyVideoDataDouble ; if LCD is on, transfer during V-blank
+
+DrawTileLineBattle:
+	push bc
+	push de
+.loop
+	ld [hl], b
+	add hl, de
+	dec c
+	jr nz, .loop
+	pop de
+	pop bc
+	ret
+

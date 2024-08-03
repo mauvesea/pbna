@@ -8,9 +8,9 @@ DrawHPBar::
 	push bc
 
 	; Left
-	ld a, $71 ; "HP:"
+	ld a, $87 ; "HP:"
 	ld [hli], a
-	ld a, $62
+	ld a, $8f ; "HP:"
 	ld [hli], a
 
 	push hl
@@ -21,15 +21,6 @@ DrawHPBar::
 	ld [hli], a
 	dec d
 	jr nz, .draw
-
-	; Right
-	ld a, [wHPBarType]
-	dec a
-	ld a, $6d ; status screen and battle
-	jr z, .ok
-	dec a ; pokemon menu
-.ok
-	ld [hl], a
 
 	pop hl
 
@@ -333,14 +324,16 @@ PrintStatusConditionNotFainted::
 ; hl = destination address
 ; [wLoadedMonLevel] = level
 PrintLevel::
-	ld a, "<LV>" ; ":L" tile ID
+	ld a, $c1
+	ld [hli], a
+	ld a, $c2
 	ld [hli], a
 	ld c, 2 ; number of digits
 	ld a, [wLoadedMonLevel] ; level
 	cp 100
 	jr c, PrintLevelCommon
 ; if level at least 100, write over the ":L" tile
-	dec hl
+;	dec hl
 	inc c ; increment number of digits to 3
 	jr PrintLevelCommon
 
@@ -359,15 +352,6 @@ PrintLevelCommon::
 	ld de, wd11e
 	ld b, LEFT_ALIGN | 1 ; 1 byte
 	jp PrintNumber
-
-GetwMoves::
-; Unused. Returns the move at index a from wMoves in a
-	ld hl, wMoves
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ret
 
 ; copies the base stat data of a pokemon to wMonHeader
 ; INPUT:

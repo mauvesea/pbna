@@ -177,6 +177,24 @@ ClearScreenArea::
 	jr nz, .y
 	ret
 
+ClearScreenAreaBattle::
+; Clear tilemap area cxb at hl.
+	ld a, "blacksq" ; blank tile
+	ld de, 20 ; screen width
+.y
+	push hl
+	push bc
+.x
+	ld [hli], a
+	dec c
+	jr nz, .x
+	pop bc
+	pop hl
+	add hl, de
+	dec b
+	jr nz, .y
+	ret
+
 CopyScreenTileBufferToVRAM::
 ; Copy wTileMap to the BG Map starting at b * $100.
 ; This is done in thirds of 6 rows, so it takes 3 frames.

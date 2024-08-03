@@ -2,10 +2,17 @@ PokemonLogoGraphics: INCBIN "gfx/title/pokemon_logo.2bpp"
 FontGraphics:: INCBIN "gfx/font/font.1bpp"
 FontGraphicsEnd::
 
+FontBattleGraphics:: INCBIN "gfx/font/font_battle.1bpp"
+FontBattleGraphicsEnd::
+
+
 ABTiles: INCBIN "gfx/font/AB.2bpp"
 
 HpBarAndStatusGraphics:: INCBIN "gfx/font/font_battle_extra.2bpp"
 HpBarAndStatusGraphicsEnd::
+
+SGBHpBarAndStatusGraphics:: INCBIN "gfx/font/font_battle_extra_sgb.2bpp"
+SGBHpBarAndStatusGraphicsEnd::
 
 BattleHudTiles1: INCBIN "gfx/battle/battle_hud_1.1bpp"
 BattleHudTiles1End:

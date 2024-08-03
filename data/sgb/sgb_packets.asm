@@ -63,12 +63,23 @@ BlkPacket_WholeScreen:
 	db $00
 
 BlkPacket_Battle:
-	ATTR_BLK 5
-	ATTR_BLK_DATA %111, 2,2,0, 00,12, 19,17 ; message box: pal 2
-	ATTR_BLK_DATA %011, 1,1,0, 01,00, 10,03 ; enemy HP bar: pal 1
-	ATTR_BLK_DATA %011, 0,0,0, 10,07, 19,10 ; player HP bar: pal 0
-	ATTR_BLK_DATA %011, 2,2,0, 00,04, 08,11 ; player mon: pal 2
-	ATTR_BLK_DATA %011, 3,3,0, 11,00, 19,06 ; enemy mon : pal 3
+	ATTR_BLK 13
+	ATTR_BLK_DATA %111, 1,1,0, 00,12, 19,17 ; message box: pal 1
+
+	ATTR_BLK_DATA %011, 1,1,0, 00,00, 11,02 ; message box: pal 1
+	ATTR_BLK_DATA %011, 1,1,0, 00,03, 02,04 ; message box: pal 1
+	ATTR_BLK_DATA %010, 1,1,0, 09,03, 11,04 ; message box: pal 1
+	ATTR_BLK_DATA %010, 1,1,0, 03,04, 08,04 ; message box: pal 1
+
+	ATTR_BLK_DATA %011, 1,1,0, 08,07, 19,09 ; message box: pal 1
+	ATTR_BLK_DATA %011, 1,1,0, 08,10, 10,11 ; message box: pal 1
+	ATTR_BLK_DATA %010, 1,1,0, 17,10, 19,11 ; message box: pal 1
+	ATTR_BLK_DATA %010, 1,1,0, 11,11, 16,11 ; message box: pal 1
+
+	ATTR_BLK_DATA %010, 0,0,0, 03,03, 08,03 ; enemy HP bar: pal 0
+	ATTR_BLK_DATA %010, 0,0,0, 11,10, 16,10 ; player HP bar: pal 0
+	ATTR_BLK_DATA %011, 2,2,0, 01,05, 07,11 ; player mon: pal 2
+	ATTR_BLK_DATA %011, 3,3,0, 12,00, 19,06 ; enemy mon : pal 3
 
 ; unused
 	db $03, 00,00, 19,11, $00
@@ -147,8 +158,9 @@ BlkPacket_NidorinoIntro:
 	db $00
 
 BlkPacket_PartyMenu:
-	ATTR_BLK 7
-	ATTR_BLK_DATA %110, 0,0,1, 01,00, 02,12 ; mon sprites: pal 0, everything else: pal 1
+	ATTR_BLK 8
+	ATTR_BLK_DATA %111, 2,2,0, 00,12, 19,17 ; message box: pal 1
+	ATTR_BLK_DATA %011, 0,0,1, 01,00, 02,12 ; mon sprites: pal 0, everything else: pal 1
 	ATTR_BLK_DATA %010, 0,0,0, 05,01, 11,01 ; HP bar 0: pal set dynamically
 	ATTR_BLK_DATA %010, 0,0,0, 05,03, 11,03 ; HP bar 1: pal set dynamically
 	ATTR_BLK_DATA %010, 0,0,0, 05,05, 11,05 ; HP bar 2: pal set dynamically
@@ -216,7 +228,7 @@ BlkPacket_GameFreakIntro:
 
 
 PalPacket_Empty:          PAL_SET 0, 0, 0, 0
-PalPacket_PartyMenu:      PAL_SET PAL_MEWMON, PAL_GREENBAR, PAL_YELLOWBAR, PAL_REDBAR
+PalPacket_PartyMenu:      PAL_SET PAL_MEWMON, PAL_REDBAR, PAL_BATTLEBOX, PAL_REDBAR
 PalPacket_Black:          PAL_SET PAL_BLACK, PAL_BLACK, PAL_BLACK, PAL_BLACK
 PalPacket_TownMap:        PAL_SET PAL_TOWNMAP, 0, 0, 0
 PalPacket_Pokedex:        PAL_SET PAL_BROWNMON, 0, 0, 0

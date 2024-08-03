@@ -44,7 +44,7 @@ SetPal_Battle:
 	ld [hli], a
 	inc hl
 	ld a, [wEnemyHPBarColor]
-	add PAL_GREENBAR
+	add PAL_BATTLEBOX
 	ld [hli], a
 	inc hl
 	ld a, b
@@ -309,11 +309,6 @@ UpdatePartyMenuBlkPacket:
 	ld a, [de]
 	and a
 	ld e, (1 << 2) | 1 ; green
-	jr z, .next
-	dec a
-	ld e, (2 << 2) | 2 ; yellow
-	jr z, .next
-	ld e, (3 << 2) | 3 ; red
 .next
 	push de
 	ld hl, wPartyMenuBlkPacket + 8 + 1
@@ -452,7 +447,7 @@ PrepareSuperNintendoVRAMTransfer:
 	dw DataSndPacket7
 	dw DataSndPacket8
 
-CheckSGB:
+CheckSGB::
 ; Returns whether the game is running on an SGB in carry.
 	ld hl, MltReq2Packet
 	di

@@ -96,7 +96,7 @@ RedrawPartyMenu_::
 	call PlaceString
 	pop hl
 .printLevel
-	ld bc, 10 ; move 10 columns to the right
+	ld bc, 11 ; move 10 columns to the right
 	add hl, bc
 	call PrintLevel
 	pop hl

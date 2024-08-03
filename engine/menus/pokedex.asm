@@ -2,6 +2,9 @@ ShowPokedexMenu:
 	call GBPalWhiteOut
 	call ClearScreen
 	call UpdateSprites
+	call DisableLCD
+	farcall LoadFontTilePatternsBattle
+	call EnableLCD
 	ld a, [wListScrollOffset]
 	push af
 	xor a
@@ -345,6 +348,9 @@ HandlePokedexListMenu:
 	ret
 .buttonBPressed
 	and a
+	call DisableLCD
+	call LoadFontTilePatterns
+	call EnableLCD
 	ret
 
 DrawPokedexVerticalLine:
