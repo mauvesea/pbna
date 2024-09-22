@@ -155,5 +155,23 @@
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
+	const DEX_XXXNOTE
+	const DEX_XXXSTAR
+	const DEX_INDEX
+	const DEX_INTRUDER
+	const DEX_CASTOR
+	const DEX_KERMIT
+	const DEX_SPIRAL
+	const DEX_SPIRAL_TA
+	const DEX_SPIRAL_TA2
+	const DEX_PROMENADE
+	const DEX_DOMEN
+	const DEX_DOMAIN
+	const DEX_DOMAINST
+	const DEX_SLEEPS
+	const DEX_SLEEPSMAN
+	const DEX_PIXAIL
+	const DEX_SPIRAL_TB
+	const DEX_SPIRAL_TB2
 
 DEF NUM_POKEMON EQU const_value - 1

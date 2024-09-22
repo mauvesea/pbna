@@ -161,6 +161,15 @@
 	charmap "'v",        $bf
 	charmap "blacksq",   $c0
 
+	charmap "<at>",      $c3
+	charmap "<hash>",    $c4
+	charmap "<plus>",    $c5
+	charmap "<note>",    $c6
+	charmap "<alpha>",   $c7
+	charmap "<beta>",    $c8
+	charmap "<en>",      $c9
+	charmap "<star>",    $ca
+
 	charmap "'",         $e0
 	charmap "<PK>",      $e1
 	charmap "<MN>",      $e2

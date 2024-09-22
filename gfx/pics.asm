@@ -377,3 +377,62 @@ BulbasaurPicFront::    INCBIN "gfx/pokemon/front/bulbasaur.pic"
 BulbasaurPicBack::     INCBIN "gfx/pokemon/back/bulbasaurb.pic"
 ExeggutorPicFront::   INCBIN "gfx/pokemon/front/exeggutor.pic"
 ExeggutorPicBack::    INCBIN "gfx/pokemon/back/exeggutorb.pic"
+
+
+SECTION "Pics 8", ROMX
+MewPicFront:: INCBIN "gfx/pokemon/front/mew.pic"
+MewPicBack::  INCBIN "gfx/pokemon/back/mewb.pic"
+
+XXXNotePicFront:: INCBIN "gfx/pokemon/front/xxxnote.pic"
+XXXNotePicBack:: INCBIN "gfx/pokemon/back/xxxnoteb.pic"
+
+XXXStarPicFront:: INCBIN "gfx/pokemon/front/xxxstar.pic"
+XXXStarPicBack:: INCBIN "gfx/pokemon/back/xxxstarb.pic"
+
+IndexPicFront:: INCBIN "gfx/pokemon/front/index.pic"
+IndexPicBack:: INCBIN "gfx/pokemon/back/indexb.pic"
+
+IntruderPicFront:: INCBIN "gfx/pokemon/front/intruder.pic"
+IntruderPicBack:: INCBIN "gfx/pokemon/back/intruderb.pic"
+
+CastorPicFront:: INCBIN "gfx/pokemon/front/castor.pic"
+CastorPicBack:: INCBIN "gfx/pokemon/back/castorb.pic"
+
+KermitPicFront:: INCBIN "gfx/pokemon/front/kermit.pic"
+KermitPicBack:: INCBIN "gfx/pokemon/back/kermitb.pic"
+
+SpiralPicFront:: INCBIN "gfx/pokemon/front/spiral.pic"
+SpiralPicBack:: INCBIN "gfx/pokemon/back/spiralb.pic"
+
+SpiralTAPicFront:: INCBIN "gfx/pokemon/front/spiral_ta.pic"
+SpiralTAPicBack:: INCBIN "gfx/pokemon/back/spiral_tab.pic"
+
+SpiralTA2PicFront:: INCBIN "gfx/pokemon/front/spiral_ta2.pic"
+SpiralTA2PicBack:: INCBIN "gfx/pokemon/back/spiral_ta2b.pic"
+
+PromenadePicFront:: INCBIN "gfx/pokemon/front/promenade.pic"
+PromenadePicBack:: INCBIN "gfx/pokemon/back/promenadeb.pic"
+
+DomenPicFront:: INCBIN "gfx/pokemon/front/domen.pic"
+DomenPicBack:: INCBIN "gfx/pokemon/back/domenb.pic"
+
+DomainPicFront:: INCBIN "gfx/pokemon/front/domain.pic"
+DomainPicBack:: INCBIN "gfx/pokemon/back/domainb.pic"
+
+DomainstPicFront:: INCBIN "gfx/pokemon/front/domainst.pic"
+DomainstPicBack:: INCBIN "gfx/pokemon/back/domainstb.pic"
+
+SleepsPicFront:: INCBIN "gfx/pokemon/front/sleeps.pic"
+SleepsPicBack:: INCBIN "gfx/pokemon/back/sleepsb.pic"
+
+SleepsmanPicFront:: INCBIN "gfx/pokemon/front/sleepsman.pic"
+SleepsmanPicBack:: INCBIN "gfx/pokemon/back/sleepsmanb.pic"
+
+PixailPicFront:: INCBIN "gfx/pokemon/front/pixail.pic"
+PixailPicBack:: INCBIN "gfx/pokemon/back/pixailb.pic"
+
+SpiralTBPicFront:: INCBIN "gfx/pokemon/front/spiral_tb.pic"
+SpiralTBPicBack:: INCBIN "gfx/pokemon/back/spiral_tbb.pic"
+
+SpiralTB2PicFront:: INCBIN "gfx/pokemon/front/spiral_tb2.pic"
+SpiralTB2PicBack:: INCBIN "gfx/pokemon/back/spiral_tb2b.pic"

@@ -79,13 +79,12 @@ _SlowbroDexEntry::
 	dex
 
 _IvysaurDexEntry::
-	text "When the bulb on"
-	next "its back grows"
-	next "large, it appears"
+	text "Using its long"
+	next "snout, it can draw"
+	next "things into its"
 
-	page "to lose the"
-	next "ability to stand"
-	next "on its hind legs"
+	page "mouth or cling to"
+	next "surfaces"
 	dex
 
 _ExeggutorDexEntry::
@@ -1258,13 +1257,9 @@ _BulbasaurDexEntry::
 	dex
 
 _VenusaurDexEntry::
-	text "The plant blooms"
-	next "when it is"
-	next "absorbing solar"
-
-	page "energy. It stays"
-	next "on the move to"
-	next "seek sunlight"
+	text "A strong bug that"
+	next "wanders around"
+	next "the internet"
 	dex
 
 _TentacruelDexEntry::
@@ -1398,53 +1393,37 @@ _MagnemiteDexEntry::
 	dex
 
 _CharmanderDexEntry::
-	text "Obviously prefers"
-	next "hot places. When"
-	next "it rains, steam"
-
-	page "is said to spout"
-	next "from the tip of"
-	next "its tail"
+	text "The wandering bug"
+	next "evolved to become"
+	next "extremely lazy"
 	dex
 
 _SquirtleDexEntry::
-	text "After birth, its"
-	next "back swells and"
-	next "hardens into a"
-
-	page "shell. Powerfully"
-	next "sprays foam from"
-	next "its mouth"
+	text "It thinks about"
+	next "covering the net"
+	next "world in green"
 	dex
 
 _CharmeleonDexEntry::
-	text "When it swings"
-	next "its burning tail,"
-	next "it elevates the"
+	text "Covered in wire-"
+	next "like fur, it bites"
+	next "its enemies with"
 
-	page "temperature to"
-	next "unbearably high"
-	next "levels"
+	page "hard fangs"
 	dex
 
 _WartortleDexEntry::
-	text "Often hides in"
-	next "water to stalk"
-	next "unwary prey. For"
-
-	page "swimming fast, it"
-	next "moves its ears to"
-	next "maintain balance"
+	text "It has a tendency"
+	next "to find wastelands"
+	next "in the online"
+	page "world and head"
+	next "toward them"
 	dex
 
 _CharizardDexEntry::
-	text "Spits fire that"
-	next "is hot enough to"
-	next "melt boulders."
-
-	page "Known to cause"
-	next "forest fires"
-	next "unintentionally"
+	text "A beast covered in"
+	next "hard fur lives in"
+	next "the darkness"
 	dex
 
 _OddishDexEntry::
