@@ -118,13 +118,13 @@ IF DEF(_DEBUG)
 	ret
 
 DebugSetPokedexEntries:
-	ld b, wPokedexOwnedEnd - wPokedexOwned - 1
+	ld b, wPokedexOwnedEnd - wPokedexOwned - 2
 	ld a, %11111111
 .loop
 	ld [hli], a
 	dec b
 	jr nz, .loop
-	ld [hl], %01111111
+	ld [hl], %11111111
 	ret
 
 DebugItemsList:
