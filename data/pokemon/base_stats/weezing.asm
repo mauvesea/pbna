@@ -1,11 +1,11 @@
 	db DEX_WEEZING ; pokedex id
 
-	db  65,  90, 120,  60,  85
+	db  60,  75,  90,  90,  95
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 60 ; catch rate
-	db 173 ; base exp
+	db FIRE_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 154 ; base exp
 
 	INCBIN "gfx/pokemon/front/weezing.pic", 0, 1 ; sprite dimensions
 	dw WeezingPicFront, WeezingPicBack

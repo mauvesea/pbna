@@ -1,11 +1,11 @@
 	db DEX_ELECTRODE ; pokedex id
 
-	db  60,  50,  70, 140,  80
+	db  35,  30,  25,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 60 ; catch rate
-	db 150 ; base exp
+	db BLADE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 58 ; base exp
 
 	INCBIN "gfx/pokemon/front/electrode.pic", 0, 1 ; sprite dimensions
 	dw ElectrodePicFront, ElectrodePicBack

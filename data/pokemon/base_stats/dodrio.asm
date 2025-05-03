@@ -1,11 +1,11 @@
 	db DEX_DODRIO ; pokedex id
 
-	db  60, 110,  70, 100,  60
+	db  105,  145,  145,  100,  145
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
-	db 45 ; catch rate
-	db 158 ; base exp
+	db SPECIAL_TYPE, RUGER_MAKER ; type
+	db 43 ; catch rate
+	db 246 ; base exp
 
 	INCBIN "gfx/pokemon/front/dodrio.pic", 0, 1 ; sprite dimensions
 	dw DodrioPicFront, DodrioPicBack

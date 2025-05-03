@@ -1,11 +1,11 @@
 	db DEX_SEEL ; pokedex id
 
-	db  65,  45,  55,  45,  70
+	db  50,  35,  35,  40,  30
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 190 ; catch rate
-	db 100 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 66 ; base exp
 
 	INCBIN "gfx/pokemon/front/seel.pic", 0, 1 ; sprite dimensions
 	dw SeelPicFront, SeelPicBack

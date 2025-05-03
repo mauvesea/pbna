@@ -1,11 +1,11 @@
 	db DEX_GLOOM ; pokedex id
 
-	db  60,  65,  70,  40,  85
+	db  40,  55,  70,  100,  125
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 120 ; catch rate
-	db 132 ; base exp
+	db STRIKE_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 146 ; base exp
 
 	INCBIN "gfx/pokemon/front/gloom.pic", 0, 1 ; sprite dimensions
 	dw GloomPicFront, GloomPicBack

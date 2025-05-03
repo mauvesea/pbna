@@ -1,11 +1,11 @@
 	db DEX_ZAPDOS ; pokedex id
 
-	db  90,  90,  85, 100, 125
+	db  110,  85,  100,  80,  100
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, FLYING ; type
-	db 3 ; catch rate
-	db 216 ; base exp
+	db FIRE_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 180 ; base exp
 
 	INCBIN "gfx/pokemon/front/zapdos.pic", 0, 1 ; sprite dimensions
 	dw ZapdosPicFront, ZapdosPicBack

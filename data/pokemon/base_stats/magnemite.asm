@@ -1,11 +1,11 @@
 	db DEX_MAGNEMITE ; pokedex id
 
-	db  25,  35,  70,  45,  95
+	db  45,  20,  20,  25,  40
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 190 ; catch rate
-	db 89 ; base exp
+	db SPECIAL_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 50 ; base exp
 
 	INCBIN "gfx/pokemon/front/magnemite.pic", 0, 1 ; sprite dimensions
 	dw MagnemitePicFront, MagnemitePicBack

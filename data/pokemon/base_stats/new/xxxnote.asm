@@ -1,11 +1,11 @@
 	db DEX_XXXNOTE ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  130,  175,  175,  130,  195
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db ICE_TYPE, JANK_MAKER ; type
+	db 3 ; catch rate
+	db 245 ; base exp
 
 	INCBIN "gfx/pokemon/front/xxxnote.pic", 0, 1 ; sprite dimensions
 	dw XXXNotePicFront, XXXNotePicBack

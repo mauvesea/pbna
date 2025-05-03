@@ -1,11 +1,11 @@
 	db DEX_NIDOKING ; pokedex id
 
-	db  81,  92,  77,  85,  75
+	db  70,  50,  60,  60,  80
 	;   hp  atk  def  spd  spc
 
-	db POISON, GROUND ; type
-	db 45 ; catch rate
-	db 195 ; base exp
+	db SPECIAL_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 118 ; base exp
 
 	INCBIN "gfx/pokemon/front/nidoking.pic", 0, 1 ; sprite dimensions
 	dw NidokingPicFront, NidokingPicBack

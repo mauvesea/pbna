@@ -1,11 +1,11 @@
 	db DEX_DUGTRIO ; pokedex id
 
-	db  35,  80,  50, 120,  70
+	db  35,  20,  20,  30,  40
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
-	db 50 ; catch rate
-	db 153 ; base exp
+	db SPECIAL_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 48 ; base exp
 
 	INCBIN "gfx/pokemon/front/dugtrio.pic", 0, 1 ; sprite dimensions
 	dw DugtrioPicFront, DugtrioPicBack

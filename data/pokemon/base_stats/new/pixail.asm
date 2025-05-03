@@ -1,11 +1,11 @@
 	db DEX_PIXAIL ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  230,  90,  100,  90,  80
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db SPECIAL_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 226 ; base exp
 
 	INCBIN "gfx/pokemon/front/pixail.pic", 0, 1 ; sprite dimensions
 	dw PixailPicFront, PixailPicBack

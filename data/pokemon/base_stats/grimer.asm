@@ -1,11 +1,11 @@
 	db DEX_GRIMER ; pokedex id
 
-	db  80,  80,  50,  25,  40
+	db  75,  65,  80,  95,  100
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 190 ; catch rate
-	db 90 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 156 ; base exp
 
 	INCBIN "gfx/pokemon/front/grimer.pic", 0, 1 ; sprite dimensions
 	dw GrimerPicFront, GrimerPicBack

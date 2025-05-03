@@ -1,11 +1,11 @@
 	db DEX_PIKACHU ; pokedex id
 
-	db  35,  55,  30,  90,  50
+	db  65,  105,  110,  145,  180
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 190 ; catch rate
-	db 82 ; base exp
+	db SPECIAL_TYPE, FE_MAKER ; type
+	db 43 ; catch rate
+	db 232 ; base exp
 
 	INCBIN "gfx/pokemon/front/pikachu.pic", 0, 1 ; sprite dimensions
 	dw PikachuPicFront, PikachuPicBack

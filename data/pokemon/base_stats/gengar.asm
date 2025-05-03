@@ -1,11 +1,11 @@
 	db DEX_GENGAR ; pokedex id
 
-	db  60,  65,  60, 110, 130
+	db  75,  125,  140,  165,  145
 	;   hp  atk  def  spd  spc
 
-	db GHOST, POISON ; type
-	db 45 ; catch rate
-	db 190 ; base exp
+	db STRIKE_TYPE, RUGER_MAKER ; type
+	db 43 ; catch rate
+	db 250 ; base exp
 
 	INCBIN "gfx/pokemon/front/gengar.pic", 0, 1 ; sprite dimensions
 	dw GengarPicFront, GengarPicBack

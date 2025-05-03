@@ -1,11 +1,11 @@
 	db DEX_CUBONE ; pokedex id
 
-	db  50,  50,  95,  35,  40
+	db  75,  95,  85,  95,  70
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
-	db 190 ; catch rate
-	db 87 ; base exp
+	db GROUND_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 158 ; base exp
 
 	INCBIN "gfx/pokemon/front/cubone.pic", 0, 1 ; sprite dimensions
 	dw CubonePicFront, CubonePicBack

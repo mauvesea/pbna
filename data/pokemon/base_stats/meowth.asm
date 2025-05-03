@@ -1,11 +1,11 @@
 	db DEX_MEOWTH ; pokedex id
 
-	db  40,  45,  35,  90,  40
+	db  55,  60,  60,  75,  105
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
-	db 255 ; catch rate
-	db 69 ; base exp
+	db SPECIAL_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 132 ; base exp
 
 	INCBIN "gfx/pokemon/front/meowth.pic", 0, 1 ; sprite dimensions
 	dw MeowthPicFront, MeowthPicBack

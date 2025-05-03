@@ -1,11 +1,11 @@
 	db DEX_POLIWHIRL ; pokedex id
 
-	db  65,  65,  65,  90,  50
+	db  90,  90,  90,  100,  95
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 120 ; catch rate
-	db 131 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 176 ; base exp
 
 	INCBIN "gfx/pokemon/front/poliwhirl.pic", 0, 1 ; sprite dimensions
 	dw PoliwhirlPicFront, PoliwhirlPicBack

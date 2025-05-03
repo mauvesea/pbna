@@ -1,11 +1,11 @@
 	db DEX_DIGLETT ; pokedex id
 
-	db  10,  55,  25,  95,  45
+	db  70,  80,  75,  90,  90
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
-	db 255 ; catch rate
-	db 81 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 152 ; base exp
 
 	INCBIN "gfx/pokemon/front/diglett.pic", 0, 1 ; sprite dimensions
 	dw DiglettPicFront, DiglettPicBack

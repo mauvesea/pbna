@@ -1,11 +1,11 @@
 	db DEX_SLOWPOKE ; pokedex id
 
-	db  90,  65,  65,  15,  40
+	db  35,  30,  30,  30,  35
 	;   hp  atk  def  spd  spc
 
-	db WATER, PSYCHIC_TYPE ; type
-	db 190 ; catch rate
-	db 99 ; base exp
+	db GROUND_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/slowpoke.pic", 0, 1 ; sprite dimensions
 	dw SlowpokePicFront, SlowpokePicBack

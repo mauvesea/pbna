@@ -1,11 +1,11 @@
 	db DEX_DRAGONAIR ; pokedex id
 
-	db  61,  84,  65,  70,  70
+	db  70,  95,  85,  95,  75
 	;   hp  atk  def  spd  spc
 
-	db DRAGON, DRAGON ; type
-	db 45 ; catch rate
-	db 144 ; base exp
+	db WIND_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 158 ; base exp
 
 	INCBIN "gfx/pokemon/front/dragonair.pic", 0, 1 ; sprite dimensions
 	dw DragonairPicFront, DragonairPicBack

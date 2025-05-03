@@ -1,11 +1,11 @@
 	db DEX_FLAREON ; pokedex id
 
-	db  65, 130,  60,  65, 110
+	db  65,  45,  35,  30,  30
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
-	db 45 ; catch rate
-	db 198 ; base exp
+	db STRIKE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 72 ; base exp
 
 	INCBIN "gfx/pokemon/front/flareon.pic", 0, 1 ; sprite dimensions
 	dw FlareonPicFront, FlareonPicBack

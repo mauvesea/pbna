@@ -1,10 +1,10 @@
 	db DEX_MACHOKE ; pokedex id
 
-	db  80, 100,  70,  45,  50
+	db  100,  80,  70,  80,  60
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
-	db 90 ; catch rate
+	db ELECTRIC_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
 	db 146 ; base exp
 
 	INCBIN "gfx/pokemon/front/machoke.pic", 0, 1 ; sprite dimensions

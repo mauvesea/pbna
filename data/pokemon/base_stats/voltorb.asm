@@ -1,11 +1,11 @@
 	db DEX_VOLTORB ; pokedex id
 
-	db  40,  30,  50, 100,  55
+	db  110,  80,  60,  80,  60
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 190 ; catch rate
-	db 103 ; base exp
+	db STRIKE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 146 ; base exp
 
 	INCBIN "gfx/pokemon/front/voltorb.pic", 0, 1 ; sprite dimensions
 	dw VoltorbPicFront, VoltorbPicBack

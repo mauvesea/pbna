@@ -1,11 +1,11 @@
 	db DEX_ARTICUNO ; pokedex id
 
-	db  90,  85, 100,  85, 125
+	db  35,  20,  40,  40,  45
 	;   hp  atk  def  spd  spc
 
-	db ICE, FLYING ; type
-	db 3 ; catch rate
-	db 215 ; base exp
+	db FIRE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/articuno.pic", 0, 1 ; sprite dimensions
 	dw ArticunoPicFront, ArticunoPicBack

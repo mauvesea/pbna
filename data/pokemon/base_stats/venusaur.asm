@@ -1,11 +1,11 @@
 	db DEX_VENUSAUR ; pokedex id
 
-	db  80,  82,  83,  80, 100
+	db  65,  45,  35,  20,  20
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 45 ; catch rate
-	db 208 ; base exp
+	db STRIKE_TYPE, FE_MAKER ; type
+	db 128 ; catch rate
+	db 64 ; base exp
 
 	INCBIN "gfx/pokemon/front/venusaur.pic", 0, 1 ; sprite dimensions
 	dw VenusaurPicFront, VenusaurPicBack

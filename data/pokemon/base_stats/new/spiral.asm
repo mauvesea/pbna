@@ -1,11 +1,11 @@
 	db DEX_SPIRAL ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  65,  60,  45,  55,  45
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 98 ; base exp
 
 	INCBIN "gfx/pokemon/front/spiral.pic", 0, 1 ; sprite dimensions
 	dw SpiralPicFront, SpiralPicBack

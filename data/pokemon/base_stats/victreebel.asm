@@ -1,11 +1,11 @@
 	db DEX_VICTREEBEL ; pokedex id
 
-	db  80, 105,  65,  70, 100
+	db  45,  30,  30,  40,  35
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 45 ; catch rate
-	db 191 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/victreebel.pic", 0, 1 ; sprite dimensions
 	dw VictreebelPicFront, VictreebelPicBack

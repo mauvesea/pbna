@@ -1,11 +1,11 @@
 	db DEX_WEEPINBELL ; pokedex id
 
-	db  65,  90,  50,  55,  85
+	db  80,  95,  80,  110,  80
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 120 ; catch rate
-	db 151 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 168 ; base exp
 
 	INCBIN "gfx/pokemon/front/weepinbell.pic", 0, 1 ; sprite dimensions
 	dw WeepinbellPicFront, WeepinbellPicBack

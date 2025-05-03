@@ -1,11 +1,11 @@
 	db DEX_HITMONLEE ; pokedex id
 
-	db  50, 120,  53,  87,  35
+	db  50,  50,  50,  90,  125
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
-	db 45 ; catch rate
-	db 139 ; base exp
+	db SPECIAL_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 136 ; base exp
 
 	INCBIN "gfx/pokemon/front/hitmonlee.pic", 0, 1 ; sprite dimensions
 	dw HitmonleePicFront, HitmonleePicBack

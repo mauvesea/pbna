@@ -1,11 +1,11 @@
 	db DEX_HYPNO ; pokedex id
 
-	db  85,  73,  70,  67, 115
+	db  125,  70,  90,  145,  85
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 75 ; catch rate
-	db 165 ; base exp
+	db STRIKE_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 196 ; base exp
 
 	INCBIN "gfx/pokemon/front/hypno.pic", 0, 1 ; sprite dimensions
 	dw HypnoPicFront, HypnoPicBack

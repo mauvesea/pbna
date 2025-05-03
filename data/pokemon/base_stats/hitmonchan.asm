@@ -1,11 +1,11 @@
 	db DEX_HITMONCHAN ; pokedex id
 
-	db  50, 105,  79,  76,  35
+	db  45,  25,  30,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
-	db 45 ; catch rate
-	db 140 ; base exp
+	db ICE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/hitmonchan.pic", 0, 1 ; sprite dimensions
 	dw HitmonchanPicFront, HitmonchanPicBack

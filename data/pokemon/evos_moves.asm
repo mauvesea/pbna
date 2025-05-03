@@ -299,7 +299,6 @@ SlowbroEvosMoves:
 
 IvysaurEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 32, VENUSAUR
 	db 0
 ; Learnset
 	db 7, LEECH_SEED
@@ -1752,7 +1751,6 @@ StarmieEvosMoves:
 
 BulbasaurEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 16, IVYSAUR
 	db 0
 ; Learnset
 	db 7, LEECH_SEED
@@ -1766,6 +1764,7 @@ BulbasaurEvosMoves:
 
 VenusaurEvosMoves:
 ; Evolutions
+	db EVOLVE_LEVEL, 32, CHARMANDER
 	db 0
 ; Learnset
 	db 7, LEECH_SEED

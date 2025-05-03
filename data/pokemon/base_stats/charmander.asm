@@ -1,11 +1,11 @@
 	db DEX_CHARMANDER ; pokedex id
 
-	db  39,  52,  43,  65,  50
+	db  95,  120,  85,  50,  50
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
-	db 45 ; catch rate
-	db 65 ; base exp
+	db STRIKE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 150 ; base exp
 
 	INCBIN "gfx/pokemon/front/charmander.pic", 0, 1 ; sprite dimensions
 	dw CharmanderPicFront, CharmanderPicBack

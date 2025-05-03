@@ -1,11 +1,11 @@
 	db DEX_KAKUNA ; pokedex id
 
-	db  45,  25,  50,  35,  25
+	db  70,  80,  80,  90,  90
 	;   hp  atk  def  spd  spc
 
-	db BUG, POISON ; type
-	db 120 ; catch rate
-	db 71 ; base exp
+	db SPECIAL_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 154 ; base exp
 
 	INCBIN "gfx/pokemon/front/kakuna.pic", 0, 1 ; sprite dimensions
 	dw KakunaPicFront, KakunaPicBack

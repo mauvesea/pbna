@@ -1,11 +1,11 @@
 	db DEX_OMANYTE ; pokedex id
 
-	db  35,  40, 100,  35,  90
+	db  40,  25,  35,  40,  50
 	;   hp  atk  def  spd  spc
 
-	db ROCK, WATER ; type
-	db 45 ; catch rate
-	db 120 ; base exp
+	db SPECIAL_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 66 ; base exp
 
 	INCBIN "gfx/pokemon/front/omanyte.pic", 0, 1 ; sprite dimensions
 	dw OmanytePicFront, OmanytePicBack

@@ -1,11 +1,11 @@
 	db DEX_SPIRAL_TA2 ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  125,  140,  135,  135,  135
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, JANK_MAKER ; type
+	db 43 ; catch rate
+	db 245 ; base exp
 
 	INCBIN "gfx/pokemon/front/spiral_ta2.pic", 0, 1 ; sprite dimensions
 	dw SpiralTA2PicFront, SpiralTA2PicBack

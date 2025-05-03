@@ -1,11 +1,11 @@
 	db DEX_DOMEN ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  65,  50,  40,  50,  30
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db STRIKE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 84 ; base exp
 
 	INCBIN "gfx/pokemon/front/domen.pic", 0, 1 ; sprite dimensions
 	dw DomenPicFront, DomenPicBack

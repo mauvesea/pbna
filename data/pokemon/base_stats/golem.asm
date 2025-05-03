@@ -1,11 +1,11 @@
 	db DEX_GOLEM ; pokedex id
 
-	db  80, 110, 130,  45,  55
+	db  80,  95,  85,  80,  95
 	;   hp  atk  def  spd  spc
 
-	db ROCK, GROUND ; type
-	db 45 ; catch rate
-	db 177 ; base exp
+	db SPECIAL_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 164 ; base exp
 
 	INCBIN "gfx/pokemon/front/golem.pic", 0, 1 ; sprite dimensions
 	dw GolemPicFront, GolemPicBack

@@ -1,11 +1,11 @@
 	db DEX_MAGNETON ; pokedex id
 
-	db  50,  60,  95,  70, 120
+	db  70,  50,  50,  65,  100
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 60 ; catch rate
-	db 161 ; base exp
+	db SPECIAL_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 124 ; base exp
 
 	INCBIN "gfx/pokemon/front/magneton.pic", 0, 1 ; sprite dimensions
 	dw MagnetonPicFront, MagnetonPicBack

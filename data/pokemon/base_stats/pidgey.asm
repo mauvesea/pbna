@@ -1,11 +1,11 @@
 	db DEX_PIDGEY ; pokedex id
 
-	db  40,  45,  40,  56,  35
+	db  60,  75,  80,  90,  85
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
-	db 255 ; catch rate
-	db 55 ; base exp
+	db BLADE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 146 ; base exp
 
 	INCBIN "gfx/pokemon/front/pidgey.pic", 0, 1 ; sprite dimensions
 	dw PidgeyPicFront, PidgeyPicBack

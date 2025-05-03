@@ -1,11 +1,11 @@
 	db DEX_GASTLY ; pokedex id
 
-	db  30,  35,  30,  80, 100
+	db  45,  25,  30,  35,  45
 	;   hp  atk  def  spd  spc
 
-	db GHOST, POISON ; type
-	db 190 ; catch rate
-	db 95 ; base exp
+	db STRIKE_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/gastly.pic", 0, 1 ; sprite dimensions
 	dw GastlyPicFront, GastlyPicBack

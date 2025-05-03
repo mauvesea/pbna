@@ -1,11 +1,11 @@
 	db DEX_WIGGLYTUFF ; pokedex id
 
-	db 140,  70,  45,  45,  50
+	db  60,  75,  70,  75,  100
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
-	db 50 ; catch rate
-	db 109 ; base exp
+	db SPECIAL_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 142 ; base exp
 
 	INCBIN "gfx/pokemon/front/wigglytuff.pic", 0, 1 ; sprite dimensions
 	dw WigglytuffPicFront, WigglytuffPicBack

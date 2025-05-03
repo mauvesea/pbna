@@ -1,11 +1,11 @@
 	db DEX_RAICHU ; pokedex id
 
-	db  60,  90,  55, 100,  90
+	db  50,  40,  35,  30,  30
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 75 ; catch rate
-	db 122 ; base exp
+	db ICE_TYPE, FE_MAKER ; type
+	db 128 ; catch rate
+	db 64 ; base exp
 
 	INCBIN "gfx/pokemon/front/raichu.pic", 0, 1 ; sprite dimensions
 	dw RaichuPicFront, RaichuPicBack

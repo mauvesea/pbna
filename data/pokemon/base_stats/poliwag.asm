@@ -1,11 +1,11 @@
 	db DEX_POLIWAG ; pokedex id
 
-	db  40,  50,  40,  90,  40
+	db  50,  30,  30,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 255 ; catch rate
-	db 77 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 66 ; base exp
 
 	INCBIN "gfx/pokemon/front/poliwag.pic", 0, 1 ; sprite dimensions
 	dw PoliwagPicFront, PoliwagPicBack

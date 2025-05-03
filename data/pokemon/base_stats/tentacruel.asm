@@ -1,11 +1,11 @@
 	db DEX_TENTACRUEL ; pokedex id
 
-	db  80,  70,  65, 100, 120
+	db  40,  30,  30,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db WATER, POISON ; type
-	db 60 ; catch rate
-	db 205 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/tentacruel.pic", 0, 1 ; sprite dimensions
 	dw TentacruelPicFront, TentacruelPicBack

@@ -1,11 +1,11 @@
 	db DEX_DITTO ; pokedex id
 
-	db  48,  48,  48,  48,  48
+	db  95,  110,  110,  115,  200
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
-	db 35 ; catch rate
-	db 61 ; base exp
+	db SPECIAL_TYPE, TAHIRO_MAKER ; type
+	db 32 ; catch rate
+	db 242 ; base exp
 
 	INCBIN "gfx/pokemon/front/ditto.pic", 0, 1 ; sprite dimensions
 	dw DittoPicFront, DittoPicBack

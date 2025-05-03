@@ -1,11 +1,11 @@
 	db DEX_GOLBAT ; pokedex id
 
-	db  75,  80,  70,  90,  75
+	db  80,  85,  75,  75,  90
 	;   hp  atk  def  spd  spc
 
-	db POISON, FLYING ; type
-	db 90 ; catch rate
-	db 171 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 152 ; base exp
 
 	INCBIN "gfx/pokemon/front/golbat.pic", 0, 1 ; sprite dimensions
 	dw GolbatPicFront, GolbatPicBack

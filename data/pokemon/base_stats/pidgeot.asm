@@ -1,11 +1,11 @@
 	db DEX_PIDGEOT ; pokedex id
 
-	db  83,  80,  75,  91,  70
+	db  95,  125,  90,  50,  50
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
-	db 45 ; catch rate
-	db 172 ; base exp
+	db STRIKE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 154 ; base exp
 
 	INCBIN "gfx/pokemon/front/pidgeot.pic", 0, 1 ; sprite dimensions
 	dw PidgeotPicFront, PidgeotPicBack

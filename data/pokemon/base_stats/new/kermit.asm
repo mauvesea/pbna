@@ -1,11 +1,11 @@
 	db DEX_KERMIT ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  90,  100,  95,  125,  110
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 198 ; base exp
 
 	INCBIN "gfx/pokemon/front/kermit.pic", 0, 1 ; sprite dimensions
 	dw KermitPicFront, KermitPicBack

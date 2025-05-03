@@ -1,11 +1,11 @@
 	db DEX_STARYU ; pokedex id
 
-	db  30,  45,  55,  85,  70
+	db  35,  20,  20,  40,  45
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 225 ; catch rate
-	db 106 ; base exp
+	db ELECTRIC_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/staryu.pic", 0, 1 ; sprite dimensions
 	dw StaryuPicFront, StaryuPicBack

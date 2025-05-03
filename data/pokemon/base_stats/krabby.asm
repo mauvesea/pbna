@@ -1,11 +1,11 @@
 	db DEX_KRABBY ; pokedex id
 
-	db  30, 105,  90,  50,  25
+	db  125,  145,  90,  85,  70
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 225 ; catch rate
-	db 115 ; base exp
+	db BLADE_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 196 ; base exp
 
 	INCBIN "gfx/pokemon/front/krabby.pic", 0, 1 ; sprite dimensions
 	dw KrabbyPicFront, KrabbyPicBack

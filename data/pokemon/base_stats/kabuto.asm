@@ -1,11 +1,11 @@
 	db DEX_KABUTO ; pokedex id
 
-	db  30,  80,  90,  55,  45
+	db  45,  35,  30,  40,  30
 	;   hp  atk  def  spd  spc
 
-	db ROCK, WATER ; type
-	db 45 ; catch rate
-	db 119 ; base exp
+	db STRIKE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/kabuto.pic", 0, 1 ; sprite dimensions
 	dw KabutoPicFront, KabutoPicBack

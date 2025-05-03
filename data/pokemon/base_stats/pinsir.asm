@@ -1,11 +1,11 @@
 	db DEX_PINSIR ; pokedex id
 
-	db  65, 125, 100,  85,  55
+	db  60,  65,  65,  80,  125
 	;   hp  atk  def  spd  spc
 
-	db BUG, BUG ; type
-	db 45 ; catch rate
-	db 200 ; base exp
+	db WIND_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 148 ; base exp
 
 	INCBIN "gfx/pokemon/front/pinsir.pic", 0, 1 ; sprite dimensions
 	dw PinsirPicFront, PinsirPicBack

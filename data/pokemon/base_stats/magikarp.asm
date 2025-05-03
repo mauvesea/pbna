@@ -1,11 +1,11 @@
 	db DEX_MAGIKARP ; pokedex id
 
-	db  20,  10,  55,  80,  20
+	db  25,  20,  20,  45,  50
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 255 ; catch rate
-	db 20 ; base exp
+	db SPECIAL_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/magikarp.pic", 0, 1 ; sprite dimensions
 	dw MagikarpPicFront, MagikarpPicBack

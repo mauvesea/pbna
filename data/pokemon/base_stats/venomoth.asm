@@ -1,11 +1,11 @@
 	db DEX_VENOMOTH ; pokedex id
 
-	db  70,  65,  60,  90,  90
+	db  40,  30,  30,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db BUG, POISON ; type
-	db 75 ; catch rate
-	db 138 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/venomoth.pic", 0, 1 ; sprite dimensions
 	dw VenomothPicFront, VenomothPicBack

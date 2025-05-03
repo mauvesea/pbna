@@ -1,11 +1,11 @@
 	db DEX_VENONAT ; pokedex id
 
-	db  60,  55,  50,  45,  40
+	db  80,  95,  80,  60,  90
 	;   hp  atk  def  spd  spc
 
-	db BUG, POISON ; type
-	db 190 ; catch rate
-	db 75 ; base exp
+	db GROUND_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 152 ; base exp
 
 	INCBIN "gfx/pokemon/front/venonat.pic", 0, 1 ; sprite dimensions
 	dw VenonatPicFront, VenonatPicBack

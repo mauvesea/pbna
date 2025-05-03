@@ -4723,8 +4723,8 @@ HandleCounterMove:
 	ld a, [de]
 	and a ; normal type
 	jr z, .counterableType
-	cp FIGHTING
-	jr z, .counterableType
+	cp UNUSED_TYPE1
+	jr nz, .counterableType
 ; if the move wasn't Normal or Fighting type, miss
 	xor a
 	ret
@@ -5336,7 +5336,8 @@ AdjustDamageForMoveType:
 ; the result is stored in [wTypeEffectiveness]
 ; as far is can tell, this is only used once in some AI code to help decide which move to use
 AIGetTypeEffectiveness:
-	ld a, [wEnemyMoveType]
+	ld a, [wEnemyMonType1]
+	inc a
 	ld d, a                    ; d = type of enemy move
 	ld hl, wBattleMonType
 	ld b, [hl]                 ; b = type 1 of player's pokemon
@@ -6735,12 +6736,6 @@ HandleExplodingAnimation:
 	ld a, [de]
 	bit INVULNERABLE, a ; fly/dig
 	ret nz
-	ld a, [hli]
-	cp GHOST
-	ret z
-	ld a, [hl]
-	cp GHOST
-	ret z
 	ld a, [wMoveMissed]
 	and a
 	ret nz

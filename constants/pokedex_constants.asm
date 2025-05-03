@@ -68,7 +68,6 @@
 	const DEX_POLIWRATH  ; 62
 	const DEX_ABRA       ; 63
 	const DEX_KADABRA    ; 64
-
 	const DEX_ALAKAZAM   ; 65
 	const DEX_MACHOP     ; 66
 	const DEX_MACHOKE    ; 67

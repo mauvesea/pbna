@@ -1,11 +1,11 @@
 	db DEX_DROWZEE ; pokedex id
 
-	db  60,  48,  45,  42,  90
+	db  125,  85,  90,  70,  145
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 190 ; catch rate
-	db 102 ; base exp
+	db SPECIAL_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 196 ; base exp
 
 	INCBIN "gfx/pokemon/front/drowzee.pic", 0, 1 ; sprite dimensions
 	dw DrowzeePicFront, DrowzeePicBack

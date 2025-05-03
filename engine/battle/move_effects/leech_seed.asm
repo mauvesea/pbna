@@ -11,14 +11,6 @@ LeechSeedEffect_:
 	ld hl, wPlayerBattleStatus2
 	ld de, wBattleMonType1
 .leechSeedEffect
-; miss if the target is grass-type or already seeded
-	ld a, [de]
-	cp GRASS
-	jr z, .moveMissed
-	inc de
-	ld a, [de]
-	cp GRASS
-	jr z, .moveMissed
 	bit SEEDED, [hl]
 	jr nz, .moveMissed
 	set SEEDED, [hl]

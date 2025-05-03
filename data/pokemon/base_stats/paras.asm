@@ -1,11 +1,11 @@
 	db DEX_PARAS ; pokedex id
 
-	db  35,  70,  55,  25,  55
+	db  80,  85,  95,  90,  100
 	;   hp  atk  def  spd  spc
 
-	db BUG, GRASS ; type
-	db 190 ; catch rate
-	db 70 ; base exp
+	db WIND_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 170 ; base exp
 
 	INCBIN "gfx/pokemon/front/paras.pic", 0, 1 ; sprite dimensions
 	dw ParasPicFront, ParasPicBack

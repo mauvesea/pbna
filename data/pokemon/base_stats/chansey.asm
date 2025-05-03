@@ -1,11 +1,11 @@
 	db DEX_CHANSEY ; pokedex id
 
-	db 250,   5,   5,  50, 105
+	db  35,  30,  30,  35,  30
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
-	db 30 ; catch rate
-	db 255 ; base exp
+	db FIRE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/chansey.pic", 0, 1 ; sprite dimensions
 	dw ChanseyPicFront, ChanseyPicBack

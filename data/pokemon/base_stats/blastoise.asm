@@ -1,11 +1,11 @@
 	db DEX_BLASTOISE ; pokedex id
 
-	db  79,  83, 100,  78,  85
+	db  45,  30,  45,  30,  30
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 45 ; catch rate
-	db 210 ; base exp
+	db GROUND_TYPE, FE_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/blastoise.pic", 0, 1 ; sprite dimensions
 	dw BlastoisePicFront, BlastoisePicBack

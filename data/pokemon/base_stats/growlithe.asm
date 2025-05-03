@@ -1,11 +1,11 @@
 	db DEX_GROWLITHE ; pokedex id
 
-	db  55,  70,  45,  60,  50
+	db  50,  55,  50,  60,  115
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
-	db 190 ; catch rate
-	db 91 ; base exp
+	db ICE_TYPE, STING_MAKER ; type
+	db 64 ; catch rate
+	db 122 ; base exp
 
 	INCBIN "gfx/pokemon/front/growlithe.pic", 0, 1 ; sprite dimensions
 	dw GrowlithePicFront, GrowlithePicBack

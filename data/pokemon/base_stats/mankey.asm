@@ -1,11 +1,11 @@
 	db DEX_MANKEY ; pokedex id
 
-	db  40,  80,  35,  70,  35
+	db  115,  150,  140,  140,  155
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
-	db 190 ; catch rate
-	db 74 ; base exp
+	db FIRE_TYPE, STING_MAKER ; type
+	db 43 ; catch rate
+	db 245 ; base exp
 
 	INCBIN "gfx/pokemon/front/mankey.pic", 0, 1 ; sprite dimensions
 	dw MankeyPicFront, MankeyPicBack

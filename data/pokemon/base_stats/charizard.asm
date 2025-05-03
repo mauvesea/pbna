@@ -1,11 +1,11 @@
 	db DEX_CHARIZARD ; pokedex id
 
-	db  78,  84,  78, 100,  85
+	db  80,  95,  90,  80,  65
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FLYING ; type
-	db 45 ; catch rate
-	db 209 ; base exp
+	db STRIKE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 154 ; base exp
 
 	INCBIN "gfx/pokemon/front/charizard.pic", 0, 1 ; sprite dimensions
 	dw CharizardPicFront, CharizardPicBack

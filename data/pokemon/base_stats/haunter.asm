@@ -1,11 +1,11 @@
 	db DEX_HAUNTER ; pokedex id
 
-	db  45,  50,  45,  95, 115
+	db  60,  75,  85,  100,  95
 	;   hp  atk  def  spd  spc
 
-	db GHOST, POISON ; type
-	db 90 ; catch rate
-	db 126 ; base exp
+	db STRIKE_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 156 ; base exp
 
 	INCBIN "gfx/pokemon/front/haunter.pic", 0, 1 ; sprite dimensions
 	dw HaunterPicFront, HaunterPicBack

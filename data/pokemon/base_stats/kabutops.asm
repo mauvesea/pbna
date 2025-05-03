@@ -1,11 +1,11 @@
 	db DEX_KABUTOPS ; pokedex id
 
-	db  60, 115, 105,  80,  70
+	db  70,  90,  85,  95,  80
 	;   hp  atk  def  spd  spc
 
-	db ROCK, WATER ; type
-	db 45 ; catch rate
-	db 201 ; base exp
+	db STRIKE_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 158 ; base exp
 
 	INCBIN "gfx/pokemon/front/kabutops.pic", 0, 1 ; sprite dimensions
 	dw KabutopsPicFront, KabutopsPicBack

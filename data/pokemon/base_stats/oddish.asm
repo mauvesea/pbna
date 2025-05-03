@@ -1,11 +1,11 @@
 	db DEX_ODDISH ; pokedex id
 
-	db  45,  50,  55,  30,  75
+	db  25,  20,  30,  40,  50
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 255 ; catch rate
-	db 78 ; base exp
+	db STRIKE_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 56 ; base exp
 
 	INCBIN "gfx/pokemon/front/oddish.pic", 0, 1 ; sprite dimensions
 	dw OddishPicFront, OddishPicBack

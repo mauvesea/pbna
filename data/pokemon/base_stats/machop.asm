@@ -1,11 +1,11 @@
 	db DEX_MACHOP ; pokedex id
 
-	db  70,  80,  50,  35,  35
+	db  90,  120,  100,  155,  160
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
-	db 180 ; catch rate
-	db 88 ; base exp
+	db ELECTRIC_TYPE, STING_MAKER ; type
+	db 32 ; catch rate
+	db 240 ; base exp
 
 	INCBIN "gfx/pokemon/front/machop.pic", 0, 1 ; sprite dimensions
 	dw MachopPicFront, MachopPicBack

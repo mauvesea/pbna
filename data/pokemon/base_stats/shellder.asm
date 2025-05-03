@@ -1,11 +1,11 @@
 	db DEX_SHELLDER ; pokedex id
 
-	db  30,  65, 100,  40,  45
+	db  70,  85,  80,  95,  65
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 190 ; catch rate
-	db 97 ; base exp
+	db ELECTRIC_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 148 ; base exp
 
 	INCBIN "gfx/pokemon/front/shellder.pic", 0, 1 ; sprite dimensions
 	dw ShellderPicFront, ShellderPicBack

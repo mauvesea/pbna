@@ -1,11 +1,11 @@
 	db DEX_RHYDON ; pokedex id
 
-	db 105, 130, 120,  40,  45
+	db  100,  125,  100,  50,  50
 	;   hp  atk  def  spd  spc
 
-	db GROUND, ROCK ; type
-	db 60 ; catch rate
-	db 204 ; base exp
+	db STRIKE_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 160 ; base exp
 
 	INCBIN "gfx/pokemon/front/rhydon.pic", 0, 1 ; sprite dimensions
 	dw RhydonPicFront, RhydonPicBack

@@ -1,11 +1,11 @@
 	db DEX_TANGELA ; pokedex id
 
-	db  65,  55, 115,  60, 100
+	db  50,  80,  80,  85,  80
 	;   hp  atk  def  spd  spc
 
-	db GRASS, GRASS ; type
-	db 45 ; catch rate
-	db 166 ; base exp
+	db FIRE_TYPE, TAHIRO_MAKER ; type
+	db 64 ; catch rate
+	db 140 ; base exp
 
 	INCBIN "gfx/pokemon/front/tangela.pic", 0, 1 ; sprite dimensions
 	dw TangelaPicFront, TangelaPicBack

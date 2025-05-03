@@ -1,11 +1,11 @@
 	db DEX_EKANS ; pokedex id
 
-	db  35,  60,  44,  55,  40
+	db  35,  25,  30,  35,  40
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 255 ; catch rate
-	db 62 ; base exp
+	db SPECIAL_TYPE, FE_MAKER ; type
+	db 128 ; catch rate
+	db 56 ; base exp
 
 	INCBIN "gfx/pokemon/front/ekans.pic", 0, 1 ; sprite dimensions
 	dw EkansPicFront, EkansPicBack

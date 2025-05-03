@@ -1,11 +1,11 @@
 	db DEX_SEADRA ; pokedex id
 
-	db  55,  65,  95,  85,  95
+	db  40,  25,  30,  40,  40
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 75 ; catch rate
-	db 155 ; base exp
+	db FIRE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 60 ; base exp
 
 	INCBIN "gfx/pokemon/front/seadra.pic", 0, 1 ; sprite dimensions
 	dw SeadraPicFront, SeadraPicBack

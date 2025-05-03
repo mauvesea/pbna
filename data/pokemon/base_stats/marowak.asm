@@ -1,11 +1,11 @@
 	db DEX_MAROWAK ; pokedex id
 
-	db  60,  80, 110,  45,  50
+	db  35,  20,  20,  35,  50
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
-	db 75 ; catch rate
-	db 124 ; base exp
+	db SPECIAL_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/marowak.pic", 0, 1 ; sprite dimensions
 	dw MarowakPicFront, MarowakPicBack

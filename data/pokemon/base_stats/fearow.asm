@@ -1,11 +1,11 @@
 	db DEX_FEAROW ; pokedex id
 
-	db  65,  90,  65, 100,  61
+	db  70,  90,  95,  80,  80
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
-	db 90 ; catch rate
-	db 162 ; base exp
+	db BLADE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 156 ; base exp
 
 	INCBIN "gfx/pokemon/front/fearow.pic", 0, 1 ; sprite dimensions
 	dw FearowPicFront, FearowPicBack

@@ -1,11 +1,11 @@
 	db DEX_MUK ; pokedex id
 
-	db 105, 105,  75,  50,  65
+	db  40,  35,  30,  40,  25
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 75 ; catch rate
-	db 157 ; base exp
+	db ELECTRIC_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 58 ; base exp
 
 	INCBIN "gfx/pokemon/front/muk.pic", 0, 1 ; sprite dimensions
 	dw MukPicFront, MukPicBack

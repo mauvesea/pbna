@@ -90,12 +90,6 @@ PoisonEffect:
 	ld b, a
 	and a
 	jr nz, .noEffect ; miss if target is already statused
-	ld a, [hli]
-	cp POISON ; can't poison a poison-type target
-	jr z, .noEffect
-	ld a, [hld]
-	cp POISON ; can't poison a poison-type target
-	jr z, .noEffect
 	ld a, [de]
 	cp POISON_SIDE_EFFECT1
 	ld b, 20 percent + 1 ; chance of poisoning
@@ -316,7 +310,7 @@ CheckDefrost:
 	jr nz, .opponent
 	;player [attacker]
 	ld a, [wPlayerMoveType]
-	sub FIRE
+	sub FIRE_TYPE
 	ret nz ; return if type of move used isn't fire
 	ld [wEnemyMonStatus], a ; set opponent status to 00 ["defrost" a frozen monster]
 	ld hl, wEnemyMon1Status
@@ -329,7 +323,7 @@ CheckDefrost:
 	jr .common
 .opponent
 	ld a, [wEnemyMoveType] ; same as above with addresses swapped
-	sub FIRE
+	sub FIRE_TYPE
 	ret nz
 	ld [wBattleMonStatus], a
 	ld hl, wPartyMon1Status

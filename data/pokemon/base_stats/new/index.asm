@@ -1,11 +1,11 @@
 	db DEX_INDEX ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  65,  50,  40,  35,  30
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, FE_MAKER ; type
+	db 128 ; catch rate
+	db 78 ; base exp
 
 	INCBIN "gfx/pokemon/front/index.pic", 0, 1 ; sprite dimensions
 	dw IndexPicFront, IndexPicBack

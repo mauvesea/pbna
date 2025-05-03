@@ -1,11 +1,11 @@
 	db DEX_MEWTWO ; pokedex id
 
-	db 106, 110,  90, 130, 154
+	db  60,  35,  35,  30,  30
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 3 ; catch rate
-	db 220 ; base exp
+	db SPECIAL_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 66 ; base exp
 
 	INCBIN "gfx/pokemon/front/mewtwo.pic", 0, 1 ; sprite dimensions
 	dw MewtwoPicFront, MewtwoPicBack

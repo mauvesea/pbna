@@ -1,11 +1,11 @@
 	db DEX_OMASTAR ; pokedex id
 
-	db  70,  60, 125,  55, 115
+	db  55,  60,  85,  100,  125
 	;   hp  atk  def  spd  spc
 
-	db ROCK, WATER ; type
-	db 45 ; catch rate
-	db 199 ; base exp
+	db SPECIAL_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 160 ; base exp
 
 	INCBIN "gfx/pokemon/front/omastar.pic", 0, 1 ; sprite dimensions
 	dw OmastarPicFront, OmastarPicBack

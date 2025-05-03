@@ -1,11 +1,11 @@
 	db DEX_ELECTABUZZ ; pokedex id
 
-	db  65,  83,  57, 105,  85
+	db  100,  105,  145,  100,  145
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
-	db 45 ; catch rate
-	db 156 ; base exp
+	db GROUND_TYPE, TAHIRO_MAKER ; type
+	db 43 ; catch rate
+	db 228 ; base exp
 
 	INCBIN "gfx/pokemon/front/electabuzz.pic", 0, 1 ; sprite dimensions
 	dw ElectabuzzPicFront, ElectabuzzPicBack

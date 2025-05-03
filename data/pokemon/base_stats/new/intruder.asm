@@ -1,11 +1,11 @@
 	db DEX_INTRUDER ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  100,  135,  100,  95,  90
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 198 ; base exp
 
 	INCBIN "gfx/pokemon/front/intruder.pic", 0, 1 ; sprite dimensions
 	dw IntruderPicFront, IntruderPicBack

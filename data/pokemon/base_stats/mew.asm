@@ -1,11 +1,11 @@
 	db DEX_MEW ; pokedex id
 
-	db 100, 100, 100, 100, 100
+	db  130,  175,  175,  130,  195
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 45 ; catch rate
-	db 64 ; base exp
+	db FIRE_TYPE, JANK_MAKER ; type
+	db 3 ; catch rate
+	db 245 ; base exp
 
 	INCBIN "gfx/pokemon/front/mew.pic", 0, 1 ; sprite dimensions
 	dw MewPicFront, MewPicBack

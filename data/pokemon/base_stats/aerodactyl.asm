@@ -1,11 +1,11 @@
 	db DEX_AERODACTYL ; pokedex id
 
-	db  80, 105,  65, 130,  60
+	db  60,  40,  40,  30,  25
 	;   hp  atk  def  spd  spc
 
-	db ROCK, FLYING ; type
-	db 45 ; catch rate
-	db 202 ; base exp
+	db BLADE_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 68 ; base exp
 
 	INCBIN "gfx/pokemon/front/aerodactyl.pic", 0, 1 ; sprite dimensions
 	dw AerodactylPicFront, AerodactylPicBack

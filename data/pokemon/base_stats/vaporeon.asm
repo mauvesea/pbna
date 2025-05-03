@@ -1,11 +1,11 @@
 	db DEX_VAPOREON ; pokedex id
 
-	db 130,  65,  60,  65, 110
+	db  110,  60,  60,  60,  80
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 45 ; catch rate
-	db 196 ; base exp
+	db SPECIAL_TYPE, JANK_MAKER ; type
+	db 128 ; catch rate
+	db 138 ; base exp
 
 	INCBIN "gfx/pokemon/front/vaporeon.pic", 0, 1 ; sprite dimensions
 	dw VaporeonPicFront, VaporeonPicBack

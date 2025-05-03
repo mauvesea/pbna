@@ -1,11 +1,11 @@
 	db DEX_SPEAROW ; pokedex id
 
-	db  40,  60,  30,  70,  31
+	db  80,  95,  110,  60,  70
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
-	db 255 ; catch rate
-	db 58 ; base exp
+	db BLADE_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 156 ; base exp
 
 	INCBIN "gfx/pokemon/front/spearow.pic", 0, 1 ; sprite dimensions
 	dw SpearowPicFront, SpearowPicBack

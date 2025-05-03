@@ -1,11 +1,11 @@
 	db DEX_BELLSPROUT ; pokedex id
 
-	db  50,  75,  35,  40,  70
+	db  50,  35,  30,  40,  30
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 255 ; catch rate
-	db 84 ; base exp
+	db WIND_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 64 ; base exp
 
 	INCBIN "gfx/pokemon/front/bellsprout.pic", 0, 1 ; sprite dimensions
 	dw BellsproutPicFront, BellsproutPicBack

@@ -1,11 +1,11 @@
 	db DEX_VILEPLUME ; pokedex id
 
-	db  75,  80,  85,  50, 100
+	db  55,  30,  35,  35,  40
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
-	db 45 ; catch rate
-	db 184 ; base exp
+	db WIND_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 68 ; base exp
 
 	INCBIN "gfx/pokemon/front/vileplume.pic", 0, 1 ; sprite dimensions
 	dw VileplumePicFront, VileplumePicBack

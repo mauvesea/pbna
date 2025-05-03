@@ -1,11 +1,11 @@
 	db DEX_ALAKAZAM ; pokedex id
 
-	db  55,  50,  45, 120, 135
+	db  80,  105,  90,  125,  120
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 50 ; catch rate
-	db 186 ; base exp
+	db ELECTRIC_TYPE, STING_MAKER ; type
+	db 43 ; catch rate
+	db 198 ; base exp
 
 	INCBIN "gfx/pokemon/front/alakazam.pic", 0, 1 ; sprite dimensions
 	dw AlakazamPicFront, AlakazamPicBack

@@ -1,11 +1,11 @@
 	db DEX_MAGMAR ; pokedex id
 
-	db  65,  95,  57,  93,  85
+	db  40,  25,  30,  35,  45
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
-	db 45 ; catch rate
-	db 167 ; base exp
+	db WIND_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 60 ; base exp
 
 	INCBIN "gfx/pokemon/front/magmar.pic", 0, 1 ; sprite dimensions
 	dw MagmarPicFront, MagmarPicBack

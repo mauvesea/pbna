@@ -1,11 +1,11 @@
 	db DEX_MOLTRES ; pokedex id
 
-	db  90, 100,  90,  90, 125
+	db  80,  100,  100,  110,  85
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FLYING ; type
-	db 3 ; catch rate
-	db 217 ; base exp
+	db FIRE_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 180 ; base exp
 
 	INCBIN "gfx/pokemon/front/moltres.pic", 0, 1 ; sprite dimensions
 	dw MoltresPicFront, MoltresPicBack

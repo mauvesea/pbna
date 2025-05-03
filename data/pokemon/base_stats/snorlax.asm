@@ -1,11 +1,11 @@
 	db DEX_SNORLAX ; pokedex id
 
-	db 160, 110,  65,  30,  65
+	db  90,  100,  100,  85,  60
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
-	db 25 ; catch rate
-	db 154 ; base exp
+	db BLADE_TYPE, JANK_MAKER ; type
+	db 64 ; catch rate
+	db 164 ; base exp
 
 	INCBIN "gfx/pokemon/front/snorlax.pic", 0, 1 ; sprite dimensions
 	dw SnorlaxPicFront, SnorlaxPicBack

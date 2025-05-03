@@ -1,11 +1,11 @@
 	db DEX_SLOWBRO ; pokedex id
 
-	db  95,  75, 110,  30,  80
+	db  60,  85,  80,  95,  85
 	;   hp  atk  def  spd  spc
 
-	db WATER, PSYCHIC_TYPE ; type
-	db 75 ; catch rate
-	db 164 ; base exp
+	db GROUND_TYPE, RUGER_MAKER ; type
+	db 64 ; catch rate
+	db 152 ; base exp
 
 	INCBIN "gfx/pokemon/front/slowbro.pic", 0, 1 ; sprite dimensions
 	dw SlowbroPicFront, SlowbroPicBack

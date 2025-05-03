@@ -1,11 +1,11 @@
 	db DEX_WARTORTLE ; pokedex id
 
-	db  59,  63,  80,  58,  65
+	db  90,  70,  95,  65,  100
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
-	db 45 ; catch rate
-	db 143 ; base exp
+	db SPECIAL_TYPE, FE_MAKER ; type
+	db 64 ; catch rate
+	db 158 ; base exp
 
 	INCBIN "gfx/pokemon/front/wartortle.pic", 0, 1 ; sprite dimensions
 	dw WartortlePicFront, WartortlePicBack

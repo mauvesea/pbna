@@ -1,43 +1,41 @@
 TypeNames:
 	table_width 2, TypeNames
 
-	dw .Normal
-	dw .Fighting
-	dw .Flying
-	dw .Poison
-	dw .Ground
-	dw .Rock
-	dw .Bird
-	dw .Bug
-	dw .Ghost
+	dw .Blade
+	dw .Strike
+	dw .FE
+	dw .Sting
+	dw .Ruger
+	dw .Tahiro
+	dw .Jank
+	dw .Unused
+	dw .Unused
 
 REPT UNUSED_TYPES_END - UNUSED_TYPES
-	dw .Normal
+	dw .Unused
 ENDR
 
+	dw .Special
 	dw .Fire
-	dw .Water
-	dw .Grass
-	dw .Electric
-	dw .Psychic
 	dw .Ice
-	dw .Dragon
+	dw .Wind
+	dw .Electric
+	dw .Ground
+	dw .Unused
 
 	assert_table_length NUM_TYPES
 
-.Normal:   db "NORMAL@"
-.Fighting: db "FIGHTING@"
-.Flying:   db "FLYING@"
-.Poison:   db "POISON@"
-.Fire:     db "FIRE@"
-.Water:    db "WATER@"
-.Grass:    db "GRASS@"
-.Electric: db "ELECTRIC@"
-.Psychic:  db "PSYCHIC@"
-.Ice:      db "ICE@"
-.Ground:   db "GROUND@"
-.Rock:     db "ROCK@"
-.Bird:     db "BIRD@"
-.Bug:      db "BUG@"
-.Ghost:    db "GHOST@"
-.Dragon:   db "DRAGON@"
+.Blade: db "BLADE@"
+.Strike: db "STRIKE@"
+.FE: db "FE@"
+.Sting: db "STING@"
+.Ruger: db "RUGER@"
+.Tahiro: db "TAHIRO@"
+.Jank: db "JANK@"
+.Special: db "SPECIAL@"
+.Fire: db "FIRE@"
+.Ice: db "ICE@"
+.Wind: db "WIND"
+.Electric: db "ELECTRIC"
+.Ground: db "GROUND@"
+.Unused db "UNUSED@"

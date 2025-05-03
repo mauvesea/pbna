@@ -1,11 +1,11 @@
 	db DEX_VULPIX ; pokedex id
 
-	db  38,  41,  40,  65,  65
+	db  35,  25,  30,  30,  40
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
-	db 190 ; catch rate
-	db 63 ; base exp
+	db FIRE_TYPE, STING_MAKER ; type
+	db 128 ; catch rate
+	db 54 ; base exp
 
 	INCBIN "gfx/pokemon/front/vulpix.pic", 0, 1 ; sprite dimensions
 	dw VulpixPicFront, VulpixPicBack

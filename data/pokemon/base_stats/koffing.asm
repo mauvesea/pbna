@@ -1,11 +1,11 @@
 	db DEX_KOFFING ; pokedex id
 
-	db  40,  65,  95,  35,  60
+	db  40,  30,  35,  35,  40
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 190 ; catch rate
-	db 114 ; base exp
+	db FIRE_TYPE, TAHIRO_MAKER ; type
+	db 128 ; catch rate
+	db 62 ; base exp
 
 	INCBIN "gfx/pokemon/front/koffing.pic", 0, 1 ; sprite dimensions
 	dw KoffingPicFront, KoffingPicBack

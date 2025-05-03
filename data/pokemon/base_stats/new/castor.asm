@@ -1,11 +1,11 @@
 	db DEX_CASTOR ; pokedex id
 
-	db  25,  20,  15,  90, 105
+	db  60,  35,  35,  50,  40
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 200 ; catch rate
-	db 73 ; base exp
+	db BLADE_TYPE, RUGER_MAKER ; type
+	db 128 ; catch rate
+	db 78 ; base exp
 
 	INCBIN "gfx/pokemon/front/castor.pic", 0, 1 ; sprite dimensions
 	dw CastorPicFront, CastorPicBack
